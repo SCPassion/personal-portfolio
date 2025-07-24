@@ -13,7 +13,6 @@ export default function Navigation({
   activeSection,
   onNavigate,
 }: NavigationProps) {
-  console.log("activeSection", activeSection);
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
@@ -36,7 +35,6 @@ export default function Navigation({
       <nav className="hidden md:block fixed top-1 left-1/2 transform -translate-x-1/2 z-40 bg-background/80 backdrop-blur-md border rounded-full px-6 py-3 shadow-lg">
         <div className="flex items-center space-x-6">
           {navigationItems.map((item) => {
-            console.log(activeSection === item.id);
             return (
               <button
                 key={item.id}
